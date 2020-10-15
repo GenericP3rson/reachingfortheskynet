@@ -4,10 +4,14 @@
 
 
 
+p {
+  font-size: 25px;
+}
 
 
-
-
+.teal {
+  background-color: rgba(117, 249, 249, 0.44); /* Lighter Teal */
+}
 
 
 /*---Media Queries --*/
