@@ -9,9 +9,23 @@ p {
 }
 
 
-.teal {
-  background-color: rgba(117, 249, 249, 0.44); /* Lighter Teal */
+.try {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -100;
 }
+
+/* .teal {
+  background-color: rgba(117, 249, 249, 0.44); Lighter Teal
+  background-color: rgb(233, 181, 217);
+  background-color: #F4976C;
+}
+
+body {
+  background-color: rgb(162, 235, 235) !important;
+  background-color: #FBE8A6 !important;
+} */
 
 
 /*---Media Queries --*/
