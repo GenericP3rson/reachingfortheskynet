@@ -12,40 +12,55 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="style.css" rel="stylesheet">
     <style>
-        .tab {
+
+  .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: border rgb(14, 212, 247);
   background-color: #ffffff;
+}
+
+p {
+font-size: 25px;
+text-align: center;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
+  border-width: 5px;
+  border-color: rgb(17, 231, 231);
   float: left;
-  border: groove;
-  outline-color: rgb(3, 170, 170);
-  cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  cursor: pointer;
+  border-style: none none solid none
+  
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: rgb(155, 221, 238);
-}
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
+
+/* close tab button */
+
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: none;
   border-top: none;
 }
+
+ /* Make the image fully responsive */
+ .carousel-inner img {
+    width: 65%;
+    height: 65%;
+  }
     </style>
     <!-- <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> -->
 </head>
@@ -93,90 +108,206 @@
 
     <!--ADD ALL YOUR CODE BELOW THIS COMMENT!-->
 
+    <div>
+      <div class="tab d-flex justify-content-center">
+        <button class="flex-fill" class="tablinks" onclick="openCity(event, 'Mission')" 
+        >FIRST® Mission</button>
+
+        <button class="flex-fill" class="tablinks" onclick="openCity(event, 'Safety')">Safety</button>
+         
+        <button class="flex-fill" class="tablinks" onclick="openCity(event, 'Resources')">Resources</button>
+         
+        <button class="flex-fill" class="tablinks" onclick="openCity(event, 'Dates')">Competition Dates</button>
+
+    
+      <!--<div class="tab mt-25 d-flex"> class="col-sm-4 mx-1" BUT trying flex rn-->
+      </div>
+      
+
+
+      <!-- Tab content -->
+      <div id="Mission" class="tabcontent text-center">
+        <span onclick="this.parentElement.style.display='none'" 
+        class="topright">&times</span>
+        <h3 class="font-weight-light pt-5 px-4">The mission of FIRST® is to inspire young people to be science and technology leaders and innovators, by engaging them in exciting mentor-based programs that build science, engineering, and technology skills, that inspire innovation, and that foster well-rounded life capabilities including self-confidence, communication, and leadership."</h3>
+        
+      </div>
+      
+      <div id="Safety" class="tabcontent text-center"> 
+        <span onclick="this.parentElement.style.display='none'" 
+        class="topright">&times</span>
+        <h2 class="pt-5">Safety First.</h2>
+        <h4 class="px-4 pb-4"><small>Our team's safety is our first priority. The resources below shaped our standards and rules for safety. COVID-19 is a rapidly evolving pandemic, and our safety standards will be continuously updated in accordance with new information and the status of COVID-19 locally. We use Keystone School's COVID-19 policies with adaptations to suit the club. To protect team members, students and faculty at Keystone School, their families, and those in our community, team members will follow the rules iterated in the Team Safety Rules at all times during meets.</small></h4>
+        <!--  When TEAM SAFETY RULES finalized update link for button and activate it
+          <a href="https://www.firstinspires.org/resource-library/frc/safety-manual" class="btn btn-info" role="button">Team Safety Rules</a>-->
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://www.keystoneschool.org/roadmap-to-reopening/" class="btn btn-info" role="button">Keystone School's COVID-19 Procedures</a>
+          </div>
+          <div class="col-sm">
+            <a href="https://www.firstinspires.org/resource-library/frc/safety-manual"  class="btn btn-info" role="button">FIRST® Official Safety Manual</a>
+           </div>
+          </div>
+        <div class="row">
+           <div class="col-sm">
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/schools.html" class="btn btn-info" role="button">CDC COVID-19 School Guidelines</a>
+          </div>
+           <div class="col-sm">
+            <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/frc/team-resources/safety/2021/safety-plan-for-teams.pdf" class="btn btn-info" role="button">FIRST® COVID-19 Guidance</a>
+       </div>
+      </div>
+      </div>
+    </div>
+      <div id="Dates" class="tabcontent text-center pt-5">
+        <span onclick="this.parentElement.style.display='none'" 
+        class="topright">&times</span>
+        <a href="https://www.firstinspires.org/robotics/frc/calendar" class="btn btn-info" role="button">FRC Season Calendar</a> 
+        <h4 class="py-3"><small>No events scheduled for 2021 season so far. Table will be updated when FRC events are scheduled. The button above links to the FIRST Season Calendar for a more comprehensive list of dates.</small></h4>
+        
+        <table class="table table-hover class="pt-5>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+        <!-- <tbody>
+            <tr>
+              <td>TBD</td>
+              <td>Oops! We missed it!</td>
+            </tr>
+            <tr>
+              <td>TBD</td>
+              <td>Oops! Something went wrong here!</td>
+            </tr>
+          </tbody>-->
+        </table>
+      </div>
+    
+      
+      <div id="Resources" class="tabcontent text-center">
+        <span onclick="this.parentElement.style.display='none'" 
+        class="topright">&times</span>
+        <h2 class="mt-5 mb-4">Game Resources</h2> 
+     
+        <div class="row mb-5">
+              <div class="col-sm">
+                <a href="https://firstfrc.blob.core.windows.net/frc2020/Manual/2020FRCGameSeasonManual.pdf" class="btn btn-info" class="col" role="button">2020 Game Manual</a>
+              </div>
+              <div class="col-sm">
+                <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/frc/game-and-season-info/competition-manual/2021/2021-frc-season-details.pdf" class="btn btn-info" class="col" role="button">2021 Season Details</a> 
+              </div>
+              <div class="col-sm">
+                <a href="https://www.firstinspires.org/resource-library?flagged=All&combine=&field_content_type_value%5B%5D=first_robotics_competition&field_resource_library_tags_tid=All&field_resource_library_tags_tid=All&sort_by=created_1&flagged=All&combine=&field_content_type_value%255B%255D=first_robotics_competition&field_resource_library_tags_tid=All&sort_by=created_1" class="btn btn-info" class="col" role="button">FRC Resource Library</a>
+              </div>
+              </div>
+          <p>Video for game challenge from past 2020 season.</p>
+          <iframe center width="657" height="370" src="https://www.youtube.com/embed/gmiYWTmFRVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+   </div>
+  
+
     <div class="container text-center pt-5" >
-      <h1 >We Are a Part of FIRST® Robotics Competition</h1> <!--Changed the size (look out display-4) -->
-      <p>FIRST® Robotics Competition challenges high-school students (under the guidance of a volunteer professional) to raise funds, construct a team "brand", and design, build, and program an industrial-sized robot, to compete in a field-game with strict rules and various tasks. It allows students to experience and participate in complex engineering processes, develop authentic business and marketing skills, and promote the growth of leadership, communication, and other team skills invaluable in the workplace and everyday life.   </p>
+      <h1 class="display-4">We Are a Part of FIRST® Robotics Competition</h1>
+      <p>FIRST® Robotics Competition challenges high-school students (under the guidance of a volunteer professional) to raise funds, construct a team "brand", and design, build, and program an industrial-sized robot, to compete in a field-game with strict rules and various tasks. It allows students to experience and participate in complex engineering processes, develop authentic business and marketing skills, and promote the growth of leadership, communication, and other team skills invaluable in the workplace and everyday life.</p>
       </div>
 
     <div class="container text-center pt-5" >
-        <h1>What is FIRST®?</h1> <!--Changed the size (look out display-4) -->
+        <h1 class="display-4">What is FIRST®?</h1>
         <p>FIRST® is a prominent non-profit public charity that designs accessible programs to empower young people to pursue education and careers in science, technology, engineering, and math and also build personal skills to become leaders and innovators in the workplace. It stimulates the growth of these skills by engaging students in menter-based programs. FIRST® has huge impact, creating a huge global community of people passionate about STEM, with over 680,000 students, ranging from Pre-K to 12th grade.</p>
         </div>
-
+    
+    <div class="container text-center pt-5 mb-5">
+      <a href="https://www.firstinspires.org/" class="btn btn-info" role="button">FIRST® Website</a>
+    </div>
   
+<!--CAROUSEL below-->
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-    <!--going to add container about Impact of Covid-19 and FIRST plans but first propose to put COVID-19 info on home page bc that is a better place to put that :)-->
-
-          
-        <div class="tab">
-          <button class="col-sm-4" class="tablinks" onclick="openCity(event, 'Mission')">FIRST® Mission</button>
-          <button class="col-sm-4" class="tablinks" onclick="openCity(event, 'Resources')">Resources</button>
-          <button class="col-sm-4" class="tablinks" onclick="openCity(event, 'Dates')">Competition Dates</button>
-        </div>
-        
-
-
-        <!-- Tab content -->
-        <div id="Mission" class="tabcontent text-center">
-          <h2><small>"The mission of FIRST® is to inspire young people to be science and technology leaders and innovators, by engaging them in exciting mentor-based programs that build science, engineering, and technology skills, that inspire innovation, and that foster well-rounded life capabilities including self-confidence, communication, and leadership."<small></h2></h3>
-        
-        </div>
-        
-        <div id="Dates" class="tabcontent">
-          <div><a href="https://www.firstinspires.org/robotics/frc/calendar">FRC Season Calendar</a></div>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>TBD</td>
-                <td>Oops! We missed it!</td>
-              </tr>
-              <tr>
-                <td>TBD</td>
-                <td>Oops! Something went wrong here!</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
       
-        
-        <div id="Resources" class="tabcontent text-center">
-          <div><a href="https://www.firstinspires.org/">FIRST® Website</a></div>
-          <div class="container text-center"
-            <h1><small> Safety First.</small></h1>
-            <p>Our team's safety is our first priority. The resources below shaped our standards and rules for safety. The COVID-19 is a rapidly evolving pandemic, and our safty standards will be continuously updated in accordance with new information and the status of COVID-19 locally. We use Keystone School's COVID-19 policies with adaptations to suit the club. To protect team members, students and faculty at Keystone School, their families, and those in our community, team members will follow the rules iterated in the Team Safety Rules at all times during meets.</p>
-              <div class="list-group text-center">
-                <a href="https://www.firstinspires.org/resource-library/frc/safety-manual">Team Safety Rules (link needs to be corrected)</a>
-                <a href="https://www.keystoneschool.org/roadmap-to-reopening/">Keystone School's COVID-19 Procedures</a>
-                <a href="https://www.firstinspires.org/resource-library/frc/safety-manual">FIRST® Official Safety Manual</a>
-                <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/frc/team-resources/safety/2021/safety-plan-for-teams.pdf">FIRST® COVID-19 Safety Guidance</a>
-                <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/schools.html">CDC COVID-19 School Guidelines</a>
-             </div>
-          <div class="container text-center"
-            <h1><small> Game Resources</small></h1>
-            
-              <div class="list-group text-center">
-                <iframe width="657" height="370" src="https://www.youtube.com/embed/gmiYWTmFRVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://firstfrc.blob.core.windows.net/frc2020/Manual/2020FRCGameSeasonManual.pdf">2020 Game Manual</a>
-                <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/frc/game-and-season-info/competition-manual/2021/2021-frc-season-details.pdf">2021 Season Details</a>
-  
-             </div>
-            <div><a href="https://www.firstinspires.org/">FIRST® Robotics Competition Resource Library</a></div>
-           
-         
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/P ORGANIZE.jpg" class="mx-auto d-block mb-5"  alt="Organize" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Organize</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/PB Marketing.webp" class="mx-auto d-block mb-5"  alt="Marketing" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Marketing</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P INVESTMENT.jpg" class="mx-auto d-block mb-5"  alt="Investment" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Get Sponsorships</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P BRAINSTORM 2.jpg" class="mx-auto d-block mb-5" alt="Brainstorm" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Brainstorm</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P BLUEPRINT.jpg" class="mx-auto d-block mb-5" alt="Design" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Design Robot</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P CONSTRUCT.jpg" class="mx-auto d-block mb-5" alt="Build" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Build Robot</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P PROGRAM.webp" class="mx-auto d-block mb-5" alt="Program" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Program Robot</h1>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/P PLAN.webp" class="mx-auto d-block mb-5" alt="Strategize" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Strategize</h2>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="img/Compete.jpg" class="mx-auto d-block mb-5" alt="Compete" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Compete</h2>
+          </div>  
+        </div>
+        <div class="carousel-item">
+          <img src="img/P GIVE BACK.webp" class="mx-auto d-block mb-5" alt="Give Back" width="1100" height="500">
+          <div class="carousel-caption">
+            <h2 class="display-3">Give Back to Community</h2>
+          </div>  
+        </div>
        
 
+      </div>
       
-
-
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    
      
-
-  
+         
 
     <!--ADD ALL YOUR CODE ABOVE THIS COMMENT!-->
 
@@ -206,5 +337,9 @@
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-  }</script>
+
+  //default tab for mission
+    
+  }
+  </script>
 </html>
